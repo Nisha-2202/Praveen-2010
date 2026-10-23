@@ -1,0 +1,188 @@
+:root{--rose:#B3124F;--wine:#3A0A22;--blush:#FCE9F0;--petal:#F4A9C2;--ivory:#FFFCFB}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--wine);line-height:1.7;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+h1,h2,.front,.member b,.env summary,.num{font-family:'Cormorant Garamond',serif}
+.script{font-family:'Dancing Script',cursive}
+
+/* side sparkle lines */
+.side{position:fixed;top:0;bottom:0;width:34px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;color:var(--rose);font-size:1.1rem;pointer-events:none;z-index:5}
+.side::before{content:"";position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(transparent,var(--petal) 15%,var(--petal) 85%,transparent)}
+.side span{padding:.4rem 0;text-shadow:0 0 6px #fff,0 0 6px #fff;position:relative;animation:twinkle 3s ease-in-out infinite}
+.side span:nth-child(2n){animation-delay:-1.2s}.side span:nth-child(3n){animation-delay:-2.1s}
+.side.left{left:6px}.side.right{right:6px}
+@keyframes twinkle{50%{opacity:.35;transform:scale(.8)}}
+
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 3rem;background:radial-gradient(ellipse at 50% 30%,var(--blush),var(--ivory) 70%)}
+.script.top{font-size:1.7rem;color:var(--rose);margin-bottom:1.2rem}
+.hero-art{--w:min(280px,62vw);position:relative;width:var(--w);margin:0 auto 2.2rem}
+.num{position:absolute;right:-14px;bottom:-14px;z-index:2;width:76px;height:76px;border-radius:50%;background:var(--rose);color:#fff;border:4px solid #fff;display:grid;place-items:center;font-size:2.3rem;font-weight:700;line-height:1;box-shadow:0 8px 18px rgba(179,18,79,.35)}
+.arch{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;border:6px solid #fff;box-shadow:0 0 0 2px var(--rose),0 24px 50px rgba(179,18,79,.25);background:linear-gradient(160deg,#FBD3E1,#F4A9C2)}
+.arch img{width:100%;height:100%;object-fit:cover;color:transparent;display:block}
+h1{font-size:clamp(2.2rem,7vw,4rem);font-weight:700;line-height:1.1;max-width:16ch;color:var(--rose)}
+.sub{max-width:30rem;margin:1rem 0 1.8rem;font-size:1.05rem}
+.btn{background:var(--rose);color:#fff;border:0;border-radius:99px;padding:.95rem 2.2rem;min-height:48px;font:500 1rem 'Jost',sans-serif;letter-spacing:.03em;cursor:pointer;box-shadow:0 10px 24px rgba(179,18,79,.3);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.env summary:focus-visible{outline:3px solid var(--petal);outline-offset:3px}
+
+/* sections */
+.world{padding:5.5rem 3rem}
+.wrap{max-width:62rem;margin:auto}
+.tint{background:var(--blush)}
+.hot{background:var(--rose);color:#fff}
+h2{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:600;line-height:1.1;margin-bottom:.4rem;display:flex;align-items:center;gap:1rem}
+h2::after{content:"";flex:1;height:1px;background:currentColor;opacity:.3}
+.intro{margin-bottom:2.4rem;opacity:.8}
+
+/* photos */
+.ph{position:relative;aspect-ratio:1/1;background:linear-gradient(160deg,#FBD3E1,#F4A9C2);overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent}
+.wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.2rem 1.6rem}
+.frame .ph{border-radius:12px;border:5px solid #fff;box-shadow:0 0 0 1.5px var(--rose),0 14px 30px rgba(179,18,79,.18)}
+.frame:nth-child(even){transform:translateY(1.6rem)}
+.frame figcaption{font:600 1.5rem 'Dancing Script',cursive;color:var(--rose);margin-top:.8rem;text-align:center}
+
+/* music */
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}
+.song{display:flex;align-items:center;gap:1.1rem;background:#fff;padding:1rem;border-radius:18px;border:1px solid var(--petal);box-shadow:0 10px 24px rgba(179,18,79,.1)}
+.cover{position:relative;flex:none;width:104px;aspect-ratio:1;border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#FBD3E1,var(--petal));display:grid;place-items:center;box-shadow:0 8px 18px rgba(179,18,79,.25)}
+.cover::after{content:"\266A";position:absolute;font-size:2.4rem;color:#fff}
+.cover img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover}
+.song.playing .cover{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.05)}}
+.meta{flex:1;min-width:0}
+.meta b{display:block;font:700 1.45rem/1.15 'Cormorant Garamond',serif;color:var(--rose)}
+.meta small{display:block;opacity:.7}
+.why{font-size:.9rem;margin:.2rem 0 .6rem;opacity:.85}
+.ctrl{display:flex;align-items:center;gap:.7rem}
+.play{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--rose);color:#fff;font-size:1rem;cursor:pointer;box-shadow:0 6px 14px rgba(179,18,79,.35)}
+.play:focus-visible{outline:3px solid var(--petal);outline-offset:3px}
+.bar{flex:1;height:6px;border-radius:9px;background:var(--blush);overflow:hidden;cursor:pointer}
+.bar i{display:block;height:100%;width:0;background:var(--rose)}
+.time{font-size:.8rem;opacity:.7;min-width:2.4em;text-align:right}
+
+/* family */
+.family{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem 1.5rem}
+.member{text-align:center}
+.ph.round{aspect-ratio:1;border-radius:12px;border:5px solid #fff;box-shadow:0 0 0 1.5px var(--rose),0 10px 24px rgba(179,18,79,.18);margin-bottom:1.2rem}
+.member b{display:block;font-size:1.5rem;font-weight:700;line-height:1.2}.member small{opacity:.75}
+
+/* favourites */
+.ach{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.1rem}
+.flip{perspective:800px;height:150px;cursor:pointer}
+.in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip:hover .in,.flip.on .in{transform:rotateY(180deg)}
+.front,.back{position:absolute;inset:0;backface-visibility:hidden;display:grid;place-items:center;text-align:center;padding:1rem;border-radius:16px;font-size:1.5rem;font-weight:600;line-height:1.2}
+.front{background:#fff;color:var(--rose);border:1px solid var(--petal)}
+.back{background:var(--wine);color:#fff;transform:rotateY(180deg);font-family:'Jost',sans-serif;font-size:1.05rem;font-weight:400}
+
+/* letters */
+.letters{display:grid;gap:1rem;margin-bottom:2.5rem}
+.env{background:var(--blush);border:1px solid var(--petal);border-radius:16px}
+.env summary{padding:1.1rem 1.4rem;font-size:1.5rem;font-weight:700;color:var(--rose);cursor:pointer;list-style:none}
+.env summary::-webkit-details-marker{display:none}
+.paper{background:#fff;margin:0 1rem 1rem;padding:1.6rem;border-radius:10px;font-family:'Dancing Script',cursive;font-size:1.6rem;line-height:1.5;border-left:4px solid var(--rose)}
+.paper p{margin-bottom:.8rem}.sign{text-align:right;font-weight:700;color:var(--rose)}
+#party2{display:block;margin:auto}
+
+footer{background:var(--wine);color:#fff;text-align:center;padding:3.5rem 1rem}
+footer .script{font-size:2.2rem;color:var(--petal);line-height:1.2;margin-bottom:.4rem}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:200}
+
+@media (max-width:600px){
+  .side{width:20px;font-size:.8rem}.side.left{left:2px}.side.right{right:2px}
+  .hero,.world{padding-inline:1.8rem}
+  .world{padding-block:3.5rem}
+  .script.top{font-size:1.4rem}
+  .wall{grid-template-columns:repeat(2,1fr);gap:1.8rem 1rem}
+  .frame figcaption{font-size:1.2rem}
+  .family{grid-template-columns:repeat(2,1fr)}
+  .ach{grid-template-columns:repeat(2,1fr);gap:.8rem}
+  .flip{height:120px}.front{font-size:1.2rem}.back{font-size:.95rem}
+  .song{padding:.8rem;gap:.8rem}.cover{width:84px}.meta b{font-size:1.25rem}
+  
+  .paper{font-size:1.4rem;padding:1.2rem;margin:0 .6rem .8rem}
+  .btn{width:100%;max-width:320px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* intro page */
+body.locked{overflow:hidden;height:100svh}
+#intro{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;cursor:pointer;background:radial-gradient(ellipse at 50% 35%,#fff,var(--blush) 75%);transition:transform .9s cubic-bezier(.7,0,.2,1),opacity .9s}
+#intro.open{transform:translateY(-100%);opacity:.6}
+.hey{font-size:2rem;color:var(--rose);margin-bottom:1.5rem}
+.envl{position:relative;width:min(300px,72vw);aspect-ratio:1.5;background:#fff;border-radius:12px;border:1.5px solid var(--rose);box-shadow:0 24px 50px rgba(179,18,79,.22);margin-bottom:2rem}
+.envl::before{content:"";position:absolute;inset:0;background:var(--blush);clip-path:polygon(0 0,100% 0,50% 60%);border-radius:12px 12px 0 0}
+.seal{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 6px 14px rgba(179,18,79,.4);animation:beat 1.4s ease-in-out infinite}
+@keyframes beat{50%{transform:translate(-50%,-50%) scale(1.15)}}
+.it{font-size:clamp(2rem,7vw,3.2rem);font-weight:700;line-height:1.15;color:var(--rose);max-width:none}
+.tap{margin-top:1.2rem;opacity:.7;letter-spacing:.04em;animation:twinkle 2.4s ease-in-out infinite}
+#intro:focus-visible{outline:4px solid var(--petal);outline-offset:-8px}
+
+/* date + countdown */
+.when{margin:0 0 1.8rem;display:flex;flex-direction:column;align-items:center;gap:.8rem}
+.date{font:600 1.5rem 'Dancing Script',cursive;color:var(--rose)}
+.count{display:flex;gap:.7rem}
+.count div{width:72px;padding:.6rem 0;background:#fff;border:1px solid var(--petal);border-radius:14px;box-shadow:0 8px 18px rgba(179,18,79,.12)}
+.count b{display:block;font:700 1.8rem/1 'Cormorant Garamond',serif;color:var(--rose)}
+.count small{font-size:.75rem;opacity:.7}
+.count.done{display:none}
+@media (max-width:600px){.count{gap:.45rem}.count div{width:62px}.date{font-size:1.25rem}}
+
+/* friends gallery */
+.squad{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.6rem 1.2rem}
+.pal{text-align:center}
+.pal .ph{border-radius:12px;border:4px solid #fff;box-shadow:0 0 0 1.5px var(--rose),0 10px 22px rgba(179,18,79,.18);margin-bottom:.8rem}
+.pal b{display:block;font:700 1.35rem/1.2 'Cormorant Garamond',serif;color:var(--rose)}
+.pal small{display:block;font-size:.85rem;opacity:.8;line-height:1.4}
+@media (max-width:600px){.squad{grid-template-columns:repeat(2,1fr);gap:1.4rem .9rem}}
+
+/* music: optional mp3 + youtube link */
+.ctrl{display:none}
+.song.ready .ctrl{display:flex}
+.listen{display:inline-block;margin-top:.5rem;font-size:.85rem;color:var(--rose);text-decoration:none;border:1px solid var(--petal);border-radius:99px;padding:.25rem .8rem}
+.song.ready .listen{margin-top:.4rem}
+.listen:hover,.listen:focus-visible{background:var(--blush)}
+.meta small{line-height:1.3}
+
+/* in-page YouTube player */
+.song{flex-wrap:wrap}
+.yt{display:none;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;margin-top:.4rem;background:var(--wine)}
+.song.open .yt{display:block}
+.yt iframe{width:100%;height:100%;border:0}
+.yt-mode .bar,.yt-mode .time,.yt-mode .listen{display:none}
+.cover,.meta b{cursor:pointer}
+
+/* favourites photo */
+.fav-photo{width:min(300px,70vw);margin:0 auto 2.2rem}
+.fav-photo .ph{border-radius:12px;border:5px solid #fff;box-shadow:0 18px 36px rgba(58,10,34,.35)}
+
+/* favourite person card shows a photo */
+.back.pic{padding:0;overflow:hidden;border:3px solid #fff;background:var(--wine)}
+.back.pic img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.flip:last-child{grid-column:auto}
+
+@media (max-width:600px){.squad .pal:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - .45rem);justify-self:center}}
+
+.family{grid-template-columns:repeat(auto-fit,minmax(150px,240px));justify-content:center}
+@media (max-width:600px){.family{grid-template-columns:repeat(2,1fr)}}
+
+.home-h{font:600 clamp(1.8rem,5vw,2.4rem)/1.2 'Cormorant Garamond',serif;color:var(--rose);margin:3.2rem 0 1.2rem}
+.tint .letters,.world .letters{margin-bottom:0}
+
+/* letters button spacing + tamil footer */
+#party2{display:block;margin:2.5rem auto 0}
+.ta{font-family:'Noto Sans Tamil','Jost',sans-serif;font-weight:500}
+
+/* english quote lines under titles */
+.quote{font:italic 500 1.3rem/1.5 'Cormorant Garamond',serif;opacity:.92}
+.sub.quote{font-size:1.25rem;max-width:30rem}
+.home-h{margin-bottom:.6rem}
+.home-q{margin-bottom:1.6rem}
+@media (max-width:600px){.quote{font-size:1.12rem}.sub.quote{font-size:1.12rem}}
+
+@media (max-width:600px){.quote{font-size:1.05rem}.sub.quote{font-size:1.05rem}}
+
+/* tamil wish paragraphs inside letters */
+.paper .tamil{font:500 1.08rem/1.95 'Noto Sans Tamil','Jost',sans-serif}
+@media (max-width:600px){.paper .tamil{font-size:1rem}}

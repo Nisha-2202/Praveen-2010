@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 21st Birthday</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500&family=Dancing+Script:wght@500;700&family=Noto+Sans+Tamil:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- INTRO PAGE -->
+<div id="intro" role="button" tabindex="0" aria-label="Tap to open your surprise">
+  <p class="script hey">Hey Praveen,</p>
+  <div class="envl"><span class="seal">♡</span></div>
+  <h1 class="it">A little surprise<br>made just for you</h1>
+  <p class="tap">Tap anywhere to open</p>
+</div>
+
+
+<div class="side left" aria-hidden="true"><span>✦</span><span>♡</span><span>✦</span><span>♡</span><span>✦</span></div>
+<div class="side right" aria-hidden="true"><span>♡</span><span>✦</span><span>♡</span><span>✦</span><span>♡</span></div>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="script top">Praveen's special day</p>
+  <div class="hero-art">
+    <div class="num" aria-hidden="true">21</div>
+    <div class="arch"><img src="photos/hero.jpg" alt="Praveen"></div>
+  </div>
+  <h1>Happy Birthday, Praveen</h1>
+  <p class="sub quote">Another year, another beautiful chapter.<br>May every page ahead be brighter.<br>A little corner made with love, just for you.<br>Happy 21st, Praveen.</p>
+  <div class="when">
+    <p class="date" id="bdayText">Birthday date</p>
+    <div class="count" id="count" aria-live="off">
+      <div><b id="cd">0</b><small>days</small></div>
+      <div><b id="ch">0</b><small>hours</small></div>
+      <div><b id="cm">0</b><small>mins</small></div>
+      <div><b id="cs">0</b><small>secs</small></div>
+    </div>
+  </div>
+  <button id="party" class="btn">Open your surprise ♡</button>
+</header>
+
+<!-- PHOTOS -->
+<section class="world">
+  <div class="wrap">
+    <h2>Our Memories</h2>
+    <p class="intro quote">Some moments are too beautiful to forget.<br>Every photo is a heartbeat we saved.<br>Time moves on, but these smiles stay.<br>Here's to the memories that made us.</p>
+    <div class="wall">
+      <figure class="frame"><div class="ph"><img src="photos/1.jpg" alt="Ride mode on"></div><figcaption>Ride mode on</figcaption></figure>
+      <figure class="frame"><div class="ph"><img src="photos/2.jpg" alt="Chill with the logs"></div><figcaption>Chill with the logs</figcaption></figure>
+      <figure class="frame"><div class="ph"><img src="photos/3.jpg" alt="Green vibes"></div><figcaption>Green vibes</figcaption></figure>
+      <figure class="frame"><div class="ph"><img src="photos/4.jpg" alt="Style ah poitu irukkaan"></div><figcaption>Style ah poitu irukkaan</figcaption></figure>
+      <figure class="frame"><div class="ph"><img src="photos/5.jpg" alt="Shy smile"></div><figcaption>Shy smile</figcaption></figure>
+      <figure class="frame"><div class="ph"><img src="photos/6.jpg" alt="That smile never fades"></div><figcaption>That smile never fades</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section class="world tint">
+  <div class="wrap">
+    <h2>Your Playlist</h2>
+    <p class="intro quote">Some songs play in the heart, not the ears.<br>Every melody holds a feeling words can't say.<br>Press play, and let the moments come back to you.<br>Life sounds better with your favourite songs.</p>
+    <div class="tracks">
+      <article class="song" data-yt="">
+        <div class="cover"><img src="music/cover1.jpg" alt="Pirai Thedum Iravile cover"></div>
+        <div class="meta">
+          <b>Pirai Thedum Iravile</b><small>Mayakkam Enna</small><p class="why">G.V. Prakash Kumar · Saindhavi</p>
+          <div class="ctrl"><button class="play" aria-label="Play Pirai Thedum Iravile">&#9654;</button><div class="bar"><i></i></div><span class="time">0:00</span></div>
+          <a class="listen" href="https://www.youtube.com/results?search_query=Pirai+Thedum+Iravile+Mayakkam+Enna+song" target="_blank" rel="noopener">Listen on YouTube &#8599;</a>
+          <audio preload="metadata" src="music/song1.mp3"></audio>
+        </div>
+        <div class="yt"></div>
+      </article>
+      <article class="song" data-yt="">
+        <div class="cover"><img src="music/cover2.jpg" alt="Unna Vida cover"></div>
+        <div class="meta">
+          <b>Unna Vida</b><small>Virumaandi</small><p class="why">Ilaiyaraaja · Kamal Haasan, Shreya Ghoshal</p>
+          <div class="ctrl"><button class="play" aria-label="Play Unna Vida">&#9654;</button><div class="bar"><i></i></div><span class="time">0:00</span></div>
+          <a class="listen" href="https://www.youtube.com/results?search_query=Unna+Vida+Virumaandi+song" target="_blank" rel="noopener">Listen on YouTube &#8599;</a>
+          <audio preload="metadata" src="music/song2.mp3"></audio>
+        </div>
+        <div class="yt"></div>
+      </article>
+      <article class="song" data-yt="">
+        <div class="cover"><img src="music/cover3.jpg" alt="Ayyayo En Usurukulla cover"></div>
+        <div class="meta">
+          <b>Ayyayo En Usurukulla</b><small>Paruthiveeran (Sandali Un Pasathala)</small><p class="why">Yuvan Shankar Raja · Krishnaraj, Manikka Vinayagam, Shreya Ghoshal</p>
+          <div class="ctrl"><button class="play" aria-label="Play Ayyayo En Usurukulla">&#9654;</button><div class="bar"><i></i></div><span class="time">0:00</span></div>
+          <a class="listen" href="https://www.youtube.com/results?search_query=Ayyayo+En+Usurukulla+Paruthiveeran+song" target="_blank" rel="noopener">Listen on YouTube &#8599;</a>
+          <audio preload="metadata" src="music/song3.mp3"></audio>
+        </div>
+        <div class="yt"></div>
+      </article>
+      <article class="song" data-yt="">
+        <div class="cover"><img src="music/cover4.jpg" alt="Pakkatha Enna Pakkatha cover"></div>
+        <div class="meta">
+          <b>Pakkatha Enna Pakkatha</b><small>Aaru</small><p class="why">Devi Sri Prasad · Tippu, Sumangali</p>
+          <div class="ctrl"><button class="play" aria-label="Play Pakkatha Enna Pakkatha">&#9654;</button><div class="bar"><i></i></div><span class="time">0:00</span></div>
+          <a class="listen" href="https://www.youtube.com/results?search_query=Pakkatha+Enna+Pakkatha+Aaru+song" target="_blank" rel="noopener">Listen on YouTube &#8599;</a>
+          <audio preload="metadata" src="music/song4.mp3"></audio>
+        </div>
+        <div class="yt"></div>
+      </article>
+      <article class="song" data-yt="">
+        <div class="cover"><img src="music/cover5.jpg" alt="Unna Maranthirukka Oru Pothum Ariya cover"></div>
+        <div class="meta">
+          <b>Unna Maranthirukka Oru Pothum Ariya</b><small>Tamil song</small><p class="why">A song straight from the heart</p>
+          <div class="ctrl"><button class="play" aria-label="Play Unna Maranthirukka Oru Pothum Ariya">&#9654;</button><div class="bar"><i></i></div><span class="time">0:00</span></div>
+          <a class="listen" href="https://www.youtube.com/results?search_query=unna+maranthirukka+oru+pothum+ariya+song" target="_blank" rel="noopener">Listen on YouTube &#8599;</a>
+          <audio preload="metadata" src="music/song5.mp3"></audio>
+        </div>
+        <div class="yt"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY -->
+<section class="world">
+  <div class="wrap">
+    <h2>Your Family</h2>
+    <p class="intro quote">Family is where life begins and love never ends.<br>Behind every success is a prayer from home.<br>No distance can break the bond of blood and love.<br>Home is not a place, it is the people.</p>
+    <div class="family">
+      <figure class="member"><div class="ph round"><img src="family/3.jpg" alt="Amma and Thambi"></div><b>Amma &amp; Thambi</b><small>Always your fans</small></figure>
+      <figure class="member"><div class="ph round"><img src="family/4.jpg" alt="Brothers"></div><b>Brothers</b><small>Together always</small></figure>
+      <figure class="member"><div class="ph round"><img src="family/2.jpg" alt="Thambi"></div><b>Thambi</b><small>Always by your side</small></figure>
+      <figure class="member"><div class="ph round"><img src="family/1.jpg" alt="Whole family"></div><b>Whole Family</b><small>Together forever</small></figure>
+    </div>
+    <h3 class="home-h">Wishes From Home</h3>
+    <p class="intro quote home-q">No blessing is stronger than a family's wish.<br>Their prayers walk beside you every step.<br>Their love asks for nothing, gives everything.<br>Read their hearts, one letter at a time.</p>
+    <div class="letters">
+      <details class="env"><summary>♡ From Appa</summary>
+        <div class="paper">
+          <p>Dear Praveen kanna,</p>
+          <p>Happy Birthday da! 🎂 21 vayasu aagiduchu, nee valarndhadhai paarthu naanga romba perumai padurom.</p>
+          <p>Un udambu nalama paathukko, nalla padi, nalla manushana irukkanum. Un ella muyarchikkum appa epovum un kooda irukken.</p>
+          <p class="sign">&ndash; Appa</p>
+        </div></details>
+      <details class="env"><summary>♡ From Amma</summary>
+        <div class="paper">
+          <p>Dear kanna,</p>
+          <p>Happy Birthday chellam! 🎂 Neram thavaama saapdu, udambu kavanichuko. Nee ennoda perumai.</p>
+          <p>Kadavul un kooda irukkanum, un ella aasaiyum niraiveranum. Un amma epovum un pakkam thaan.</p>
+          <p class="sign">&ndash; Amma</p>
+        </div></details>
+      <details class="env"><summary>♡ From Thambi</summary>
+        <div class="paper">
+          <p>Dear Anna,</p>
+          <p>Happy Birthday anna! 🥳 Nee thaan en hero. Enakku ennaiku vendumnaalum nee thaan support.</p>
+          <p>Treat venum anna, marakkaama! 😜 Love you anna ❤️</p>
+          <p class="sign">&ndash; Thambi</p>
+        </div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FAVOURITES -->
+<section class="world hot">
+  <div class="wrap">
+    <h2>Your Favourites</h2>
+    <p class="intro quote">The little things you love tell your story.<br>Favourites make a person unique.<br>Every choice is a small window to your heart.<br>Here are the things that make you, you.</p>
+    <div class="ach">
+      <div class="flip"><div class="in"><div class="front">Favourite<br>Actor</div><div class="back">Vijay</div></div></div>
+      <div class="flip"><div class="in"><div class="front">Favourite<br>Game</div><div class="back">Cricket</div></div></div>
+      <div class="flip"><div class="in"><div class="front">Favourite<br>Colour</div><div class="back">Pink</div></div></div>
+      <div class="flip"><div class="in"><div class="front">Favourite<br>Movie</div><div class="back">Vada Chennai</div></div></div>
+      <div class="flip"><div class="in"><div class="front">Travel<br>Mood</div><div class="back">Night travel</div></div></div>
+      <div class="flip"><div class="in"><div class="front">Favourite<br>Person</div><div class="back pic"><img src="photos/fav.jpg" alt="Favourite person"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LETTERS -->
+<section class="world">
+  <div class="wrap">
+    <h2>Letters For You</h2>
+    <p class="intro quote">Some feelings are better written than spoken.<br>Every word here comes straight from the heart.<br>Read slowly, love lives between the lines.<br>Small gifts made of big emotions.</p>
+    <div class="letters">
+      <details class="env"><summary>♡ From Nisha</summary>
+        <div class="paper">
+          <p>Happy Birthday to Praveen 🎂🥳</p>
+          <p>May your birthday be filled with happiness, love, and laughter. ❤️</p>
+          <p>I wish you lots of success and good health in the coming years. 💐</p>
+          <p>May all your dreams and wishes come true. 🌟</p>
+          <p>Keep smiling, stay happy, and always be the amazing person you are! ☺️</p>
+          <p class="tamil">நீ எப்போதும் சந்தோஷமாக இருக்கணும்… ❤️<br>
+          எப்போதும் சிரித்துக்கொண்டே இருக்கணும்… 😊<br>
+          உன்னுடைய அந்த அழகான சிரிப்பை எப்போதும் இழக்கக் கூடாது. 🥰</p>
+          <p class="tamil">உன் வாழ்க்கையில் வரும் ஒவ்வொரு நாளும் அழகானதாக இருக்கணும். ✨<br>
+          நீ ஆசைப்படும் எல்லா விஷயங்களும் உனக்கு கிடைக்கணும். 🌸<br>
+          உன் கனவுகள் எல்லாம் ஒவ்வொன்றாக நனவாகணும். 💫<br>
+          எந்த சூழ்நிலையிலும் உன் தன்னம்பிக்கையை மட்டும் இழக்காதே. ❤️</p>
+          <p class="tamil">உன்னை சுற்றி எப்போதும் நல்ல மனிதர்களும், நல்ல நினைவுகளும் இருக்கணும். 🫶<br>
+          உன் முகத்தில் இருக்கும் இந்த சிரிப்பு எப்போதும் இப்படியே இருக்கணும். 😊<br>
+          வாழ்க்கையில் எவ்வளவு கஷ்டங்கள் வந்தாலும், அதை கடந்து இன்னும் அழகாக வளரணும். 🌷<br>
+          இன்று மட்டுமல்ல, உன் வாழ்க்கையின் ஒவ்வொரு நாளும் சந்தோஷமாக இருக்கணும். 💕</p>
+          <p>Once again, Happy Birthday! 🎂🥳❤️</p>
+          <p class="sign">&ndash; Nisha</p>
+        </div></details>
+      <details class="env"><summary>♡ From Your Friends</summary>
+        <div class="paper">
+          <p>Dear Praveen,</p>
+          <p>Happy Birthday da machan! 🥳 Un gang ellarum sernthu solrom: nee irukkura idathula bore adikkave adikkadhu.</p>
+          <p>Indha year Vijay padam first day first show paakkanum, night travel poganum, cricket la mass ah aadanum. Ellathulayum nee thaan hero!</p>
+          <p>Treat ah mattum marakkaadha da 😜</p>
+          <p class="sign">&ndash; Your Gang</p>
+        </div></details>
+      <details class="env"><summary>♡ Our Wishes For You</summary>
+        <div class="paper">
+          <p>✦ Un ella kanavum nijam aaganum.</p>
+          <p>✦ Epovum happy ah, healthy ah irukkanum.</p>
+          <p>✦ Neraya places poganum, neraya memories serkkanum.</p>
+          <p>✦ Cricket la oru century adikkanum 😄</p>
+          <p>✦ Un family ku perumai sera nee valarnthu varanum.</p>
+          <p class="sign">Happy 21st, Praveen! 🎂</p>
+        </div></details>
+    </div>
+    <button id="party2" class="btn">Send more love ♡</button>
+  </div>
+</section>
+
+<footer>
+  <p class="script">Happy 21st, Praveen</p>
+  <p>Made with <span class="ta">அன்புடன்</span> Nisha</p>
+</footer>
+
+<canvas id="confetti"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
